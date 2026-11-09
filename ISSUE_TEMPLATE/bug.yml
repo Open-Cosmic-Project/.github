@@ -1,0 +1,72 @@
+name: Reportar un fallo
+description: Algo no compila, no arranca o se comporta mal
+title: "[Fallo] "
+labels: ["fallo"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por avisar. Cuanto más concreto sea el reporte, más rápido se arregla.
+        CosmicOS es experimental: casi todo está en la rama `eventhorizon`.
+  - type: dropdown
+    id: componente
+    attributes:
+      label: Componente
+      options:
+        - Core (cinitd, kernel.root, clauncher, cdevd, corchd)
+        - Daemons
+        - UI
+        - Pkg (SPS)
+        - Tools (cosmic-build, cosmic-flash, fastboot, cad…)
+        - Kernel
+        - Libs
+        - Sdk
+        - Patches
+        - Device
+        - Docs
+        - Cosmic-Manifest / Cosmic-Workspace
+        - No lo sé
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Rama y commit
+      description: Por ejemplo `eventhorizon` y la salida de `git rev-parse --short HEAD` en el repo afectado.
+      placeholder: eventhorizon @ ca3932f
+    validations:
+      required: true
+  - type: dropdown
+    id: arquitectura
+    attributes:
+      label: Arquitectura
+      options:
+        - x86_64 (máquina de desarrollo)
+        - arm64
+        - riscv64
+    validations:
+      required: true
+  - type: textarea
+    id: que-paso
+    attributes:
+      label: ¿Qué pasó?
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducirlo
+      placeholder: |
+        1. repo sync -g desktop-dev
+        2. cargo check --workspace
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: ¿Qué esperabas que pasara?
+  - type: textarea
+    id: registros
+    attributes:
+      label: Registros o salida del error
+      render: shell

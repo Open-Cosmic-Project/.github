@@ -136,17 +136,29 @@ cargo check                  # el hito 1
 </details>
 
 <details>
+<summary><b>📡 Actividad reciente</b></summary>
+
+&nbsp;
+
+Se actualiza sola cada semana con la API de GitHub.
+
+<!-- REPOS:START -->
+<!-- REPOS:END -->
+
+</details>
+
+<details>
 <summary><b>🤝 Participar</b></summary>
 
 &nbsp;
 
 El proyecto es muy joven. Lo más útil ahora mismo:
 
-- Abrir un *issue* en el repositorio que corresponda con lo que veas roto o confuso.
+- Abrir un *issue* en el repositorio que corresponda con lo que veas roto o confuso (hay formularios para fallos y propuestas).
 - Leer la especificación en [Docs](https://github.com/Open-Cosmic-Project/Docs) y señalar lo que no cierre.
 - Probar `repo sync` y `./cosmic-build` en tu máquina y contar qué falla.
 
-La documentación está en español; el inglés llegará más adelante.
+Las reglas están en [CONTRIBUTING](https://github.com/Open-Cosmic-Project/.github/blob/HEAD/CONTRIBUTING.md). La documentación está en español; el inglés llegará más adelante.
 
 </details>
 

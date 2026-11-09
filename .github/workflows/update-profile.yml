@@ -1,0 +1,31 @@
+name: Actualizar el perfil
+
+on:
+  schedule:
+    - cron: "0 14 * * 1"   # lunes, 09:00 en Colombia
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerar la tabla de actividad
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: ./scripts/update-profile.sh
+
+      - name: Confirmar si hay cambios
+        run: |
+          if git diff --quiet; then
+            echo "Sin cambios."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -am "Perfil: actualizar actividad de los repositorios"
+            git push
+          fi

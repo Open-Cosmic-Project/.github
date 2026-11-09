@@ -1,0 +1,54 @@
+name: Proponer un cambio
+description: Una idea o una decisión de diseño
+title: "[Propuesta] "
+labels: ["propuesta"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Los cambios de diseño se hablan antes de escribir código. Si se acepta, la decisión queda
+        registrada en la especificación (repositorio Docs).
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - Kernel y arranque
+        - Seguridad y permisos
+        - SPS y paquetes
+        - Interfaz
+        - Demonios y servicios
+        - Construcción y herramientas
+        - Documentación
+        - Otra
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema
+      description: ¿Qué falta, qué molesta o qué se podría hacer mejor?
+    validations:
+      required: true
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Propuesta
+    validations:
+      required: true
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas que consideraste
+  - type: textarea
+    id: impacto
+    attributes:
+      label: Impacto
+      description: ¿Cambia permisos, el modelo de amenazas, la compatibilidad o algún formato (por ejemplo `Manifest.json`)?
+  - type: checkboxes
+    id: reglas
+    attributes:
+      label: Antes de enviar
+      options:
+        - label: Revisé la especificación y no hay una decisión ya tomada sobre esto.
+        - label: Si implica código nuevo, aceptaría que se publique con licencia GPL, LGPL o AGPL.
