@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 456" width="1200" height="456" role="img" aria-labelledby="t d">
+<title id="t">Arquitectura de CosmicOS</title>
+<desc id="d">Seis capas, de arriba abajo: apps, interfaz, demonios, núcleo, kernel y hardware.</desc>
+<style>
+.l{animation:rise .6s ease-out backwards}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.l{animation:none}}
+text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+</style>
+<rect width="1200" height="456" rx="16" fill="#0e1330"/>
+<g class="l" style="animation-delay:0.0s">
+<rect x="40" y="24" width="1120" height="60" rx="12" fill="#141a38"/>
+<rect x="40" y="24" width="8" height="60" rx="4" fill="#ff5c8a"/>
+<text x="72" y="62" font-size="22" font-weight="700" fill="#ff5c8a">Apps</text>
+<text x="230" y="61" font-size="19" fill="#e6e3ff">Paquetes .sps · SDK Qt6 · Manifest.json · permisos y sandbox por app</text>
+</g>
+<g class="l" style="animation-delay:0.18s">
+<rect x="40" y="96" width="1120" height="60" rx="12" fill="#141a38"/>
+<rect x="40" y="96" width="8" height="60" rx="4" fill="#ffb020"/>
+<text x="72" y="134" font-size="22" font-weight="700" fill="#ffb020">Interfaz</text>
+<text x="230" y="133" font-size="19" fill="#e6e3ff">PhanteonWM (Wayland) · CreationDE · cboard · cosmic-splash</text>
+</g>
+<g class="l" style="animation-delay:0.36s">
+<rect x="40" y="168" width="1120" height="60" rx="12" fill="#141a38"/>
+<rect x="40" y="168" width="8" height="60" rx="4" fill="#5cc8ff"/>
+<text x="72" y="206" font-size="22" font-weight="700" fill="#5cc8ff">Demonios</text>
+<text x="230" y="205" font-size="19" fill="#e6e3ff">clogd · cnotifd · cbrokerd · cpowerd · csettingsd · cupdated · cpushd · cfronterad</text>
+</g>
+<g class="l" style="animation-delay:0.54s">
+<rect x="40" y="240" width="1120" height="60" rx="12" fill="#141a38"/>
+<rect x="40" y="240" width="8" height="60" rx="4" fill="#6ee7a0"/>
+<text x="72" y="278" font-size="22" font-weight="700" fill="#6ee7a0">Núcleo</text>
+<text x="230" y="277" font-size="19" fill="#e6e3ff">cinitd (PID 1) · kernel.root · clauncher · cdevd · corchd</text>
+</g>
+<g class="l" style="animation-delay:0.72s">
+<rect x="40" y="312" width="1120" height="60" rx="12" fill="#141a38"/>
+<rect x="40" y="312" width="8" height="60" rx="4" fill="#b79bff"/>
+<text x="72" y="350" font-size="22" font-weight="700" fill="#b79bff">Kernel</text>
+<text x="230" y="349" font-size="19" fill="#e6e3ff">Linux 6.18 LTS · SELinux · arm64 y riscv64</text>
+</g>
+<g class="l" style="animation-delay:0.8999999999999999s">
+<rect x="40" y="384" width="1120" height="60" rx="12" fill="#141a38"/>
+<rect x="40" y="384" width="8" height="60" rx="4" fill="#9aa3c7"/>
+<text x="72" y="422" font-size="22" font-weight="700" fill="#9aa3c7">Hardware</text>
+<text x="230" y="421" font-size="19" fill="#e6e3ff">ARM64 · RISC-V · bootloader desbloqueable</text>
+</g>
+</svg>
