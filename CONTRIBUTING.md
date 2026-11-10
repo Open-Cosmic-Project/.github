@@ -21,9 +21,15 @@ Todo el desarrollo está en `eventhorizon`. Abre las *pull requests* contra esa 
 
 ## Licencias
 
-- El código propio solo puede usar licencias GPL-3.0, LGPL-3.0 (SDK) o AGPL-3.0 (módulos de red). El kernel es GPL-2.0.
-- No se aceptan archivos propios con MIT, Apache o BSD. Las **dependencias** con esas licencias sí se pueden usar.
+Cada repositorio tiene su propia licencia (mira su archivo `LICENSE`): GPL-3.0 en el sistema base, AGPL-3.0 en los demonios, LGPL-2.1 en las bibliotecas y el SDK, y licencias permisivas (MIT, BSD) en la configuración. El kernel es GPL-2.0.
+
+- Tu código nuevo va con la licencia del repositorio al que contribuyes.
 - Cada archivo nuevo lleva su cabecera SPDX, por ejemplo `// SPDX-License-Identifier: GPL-3.0-or-later`.
+- Las **dependencias** pueden tener otras licencias compatibles (MIT, Apache-2.0...); lo que importa es la licencia de tu aportación.
+
+## Firma de origen (DCO)
+
+Cada commit lleva una línea `Signed-off-by: Tu Nombre <correo>` (`git commit -s`). Con ella certificas, según el [Developer Certificate of Origin](https://developercertificate.org/), que tienes derecho a aportar ese código bajo la licencia del repositorio. No hay CLA: el copyright sigue siendo de quien escribe el código.
 
 ## Antes de abrir una pull request
 

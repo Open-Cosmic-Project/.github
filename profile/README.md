@@ -32,7 +32,7 @@ CosmicOS es una alternativa a Android e iOS pensada primero para el **móvil** y
 | **Aislamiento por defecto** | Cada app y cada demonio en su propio sandbox, con SELinux, namespaces y Landlock |
 | **Sin Google** | Sin GMS ni APKs; notificaciones push propias y autoalojables; casi nada sale del teléfono |
 | **Tuyo de verdad** | Bootloader desbloqueable y relockable, sin eFUSE que impida bajar de versión |
-| **Código abierto** | Solo licencias GPL, LGPL y AGPL para el código propio |
+| **Código abierto** | Copyleft (GPL, AGPL) donde protege la apertura del sistema y licencias más permisivas en la configuración |
 
 </details>
 
@@ -83,20 +83,20 @@ Cada carpeta del árbol es un repositorio.
 | Repositorio | Contenido | Lenguajes | Licencia |
 |---|---|---|---|
 | [**Core**](https://github.com/Open-Cosmic-Project/Core) | `cinitd`, `kernel.root`, `clauncher`, `cdevd`, `corchd` | Rust, Go | GPL-3.0 |
-| [**Daemons**](https://github.com/Open-Cosmic-Project/Daemons) | Demonios del sistema | Rust | GPL-3.0 / AGPL-3.0 |
+| [**Daemons**](https://github.com/Open-Cosmic-Project/Daemons) | Demonios del sistema | Rust | AGPL-3.0 |
 | [**UI**](https://github.com/Open-Cosmic-Project/UI) | PhanteonWM, CreationDE, teclado, pantalla de arranque | Rust, C++ | GPL-3.0 |
 | [**Pkg**](https://github.com/Open-Cosmic-Project/Pkg) | SPS, el gestor de paquetes | Rust | GPL-3.0 |
 | [**Tools**](https://github.com/Open-Cosmic-Project/Tools) | `cosmic-build`, `cosmic-repo`, `cosmic-flash`, `fastboot`, `cad` | Go, Rust, C++ | GPL-3.0 |
-| [**Kernel**](https://github.com/Open-Cosmic-Project/Kernel) | Linux 6.18 LTS purgado, configuraciones y scripts | C | GPL-2.0 |
-| [**Libs**](https://github.com/Open-Cosmic-Project/Libs) | `cosmic-core`, `cosmic-usb` | Rust, C | GPL-3.0 |
-| [**Sdk**](https://github.com/Open-Cosmic-Project/Sdk) | SDK para desarrollar apps | Rust | LGPL-3.0 |
-| [**Patches**](https://github.com/Open-Cosmic-Project/Patches) | Parches de Chromium y Qt | — | la del proyecto parcheado |
-| [**Device**](https://github.com/Open-Cosmic-Project/Device) | Firmware y paquetes por dispositivo | — | por definir |
-| [**Cosmic-Workspace**](https://github.com/Open-Cosmic-Project/Cosmic-Workspace) | `Cargo.toml` y configuración de Rust de la raíz | — | GPL-3.0 |
-| [**Cosmic-Manifest**](https://github.com/Open-Cosmic-Project/Cosmic-Manifest) | Manifest de `repo` para bajar todo el árbol | — | — |
-| [**Docs**](https://github.com/Open-Cosmic-Project/Docs) | Especificación y guías | — | por definir |
+| [**Kernel**](https://github.com/Open-Cosmic-Project/Kernel) | Linux 6.18 LTS purgado, configuraciones y scripts | C | GPL-2.0 y GPL-3.0 |
+| [**Libs**](https://github.com/Open-Cosmic-Project/Libs) | `cosmic-core`, `cosmic-usb` | Rust, C | LGPL-2.1 |
+| [**Sdk**](https://github.com/Open-Cosmic-Project/Sdk) | SDK para desarrollar apps | Rust | LGPL-2.1 |
+| [**Patches**](https://github.com/Open-Cosmic-Project/Patches) | Parches de Chromium y Qt | — | LGPL-2.1 |
+| [**Device**](https://github.com/Open-Cosmic-Project/Device) | Firmware y paquetes por dispositivo | — | MIT |
+| [**Cosmic-Workspace**](https://github.com/Open-Cosmic-Project/Cosmic-Workspace) | `Cargo.toml` y configuración de Rust de la raíz | — | MIT |
+| [**Cosmic-Manifest**](https://github.com/Open-Cosmic-Project/Cosmic-Manifest) | Manifest de `repo` para bajar todo el árbol | — | BSD-3-Clause |
+| [**Docs**](https://github.com/Open-Cosmic-Project/Docs) | Especificación y guías | — | CC0 |
 
-Los módulos que tocan la red (`cpushd`, `cfronterad`) van con AGPL; el SDK, con LGPL para que las apps de terceros puedan usarlo.
+El kernel lleva GPL-2.0 (obligatoria) y el resto del repositorio `Kernel`, GPL-3.0. Los demonios van con AGPL-3.0, y las bibliotecas y el SDK con LGPL-2.1 para que las apps de terceros puedan usarlos. La configuración (`Cosmic-Workspace`, `Device`) es MIT y el manifiesto, BSD-3-Clause.
 
 </details>
 
