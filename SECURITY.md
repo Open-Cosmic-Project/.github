@@ -16,6 +16,10 @@ Incluye:
 
 Interesan especialmente los fallos en el aislamiento entre apps, la verificación de paquetes `.sps`, el arranque verificado, el desbloqueo y bloqueo del bootloader, y la gestión de claves.
 
+## Plazo
+
+Se sigue la divulgación coordinada: se publica el detalle de la vulnerabilidad cuando haya arreglo o, como máximo, 90 días después del aviso.
+
 ## Versiones soportadas
 
 Mientras el proyecto esté en `eventhorizon`, solo se corrige la rama actual.
